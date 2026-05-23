@@ -14,11 +14,8 @@ st.caption("資料來源：parking_lots.csv（共享單車歷史與型態站點�
 @st.cache_data
 def load_data():
 
-    # 自動抓取專案根目錄
-    BASE_DIR = Path(__file__).resolve().parent.parent
-
     # data 資料夾中的 csv
-    csv_path = BASE_DIR / "data" / "parking_lots.csv"
+    csv_path = "./parking_lots.csv"
 
     # 讀取資料
     df = pd.read_csv(csv_path)
